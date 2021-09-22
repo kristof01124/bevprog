@@ -3,24 +3,24 @@
 struct value {
 	double number;
 	std::string unit;
-	bool convertTo(std::string newUnit) {
+	bool convertTo(const std::string& newUnit) {
 		return set(number * convert(unit,newUnit), newUnit);
 	}
-	bool set(double newNumber, std::string newUnit) {
+	bool set(const double& newNumber, const std::string& newUnit) {
 		if (incMeters(newUnit) == -1)
 			return false;
 		number = newNumber;
 		unit = newUnit;
 		return true;
 	}
-	bool operator < (const value other) {
+	bool operator < (const value& other) {
 		return number < other.number;
 	}
 private:
-	double convert(std::string a, std::string b) {
+	double convert(const std::string& a, const std::string& b) {
 		return incMeters(a)/incMeters(b);
 	}
-	double incMeters(std::string unit) {
+	double incMeters(const std::string& unit) {
 		if (unit == "cm")
 			return 1;
 		if (unit == "m")
@@ -41,8 +41,10 @@ int main() {
 	vector<value> values;
 	while (cin>>num>>unit) {
 		value temp;
-		if (!temp.set(num,unit)) 
+		if (!temp.set(num,unit)) {
+			std::cout<<"Wrong unit type!"<<std::endl;
 			continue;
+		}
 		temp.convertTo("m");
 		values.push_back(temp);
 		if (first) {
@@ -59,8 +61,8 @@ int main() {
 		szum.number += temp.number;
 	}
 	std::sort(values.begin(), values.end());
-	std::cout<<"The smallest on is "<<mini.number<<" m."<<std::endl;
-	std::cout<<"The largest is "<<maxi.number<<" m."<<std::endl;
+	std::cout<<"The smallest one is "<<mini.number<<" m."<<std::endl;
+	std::cout<<"The largest one is "<<maxi.number<<" m."<<std::endl;
 	std::cout<<"The sum is "<<szum.number<<" m."<<std::endl;
 	for (value i:values)
 		std::cout<<i.number<<" m."<<std::endl;
