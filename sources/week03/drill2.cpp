@@ -37,9 +37,9 @@ int main() {
 	value mini, maxi, szum;
 	bool first = true;
 	vector<value> values;
+	double num;
+	std::string unit;
 	while (cin>>num>>unit) {
-		double num;
-		std::string unit;
 		value temp;
 		if (!temp.set(num,unit)) {
 			std::cout<<"Wrong unit type!"<<std::endl;
