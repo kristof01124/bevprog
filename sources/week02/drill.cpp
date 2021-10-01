@@ -9,7 +9,7 @@ int main()
  cout << "Dear " << first_name << ",\n";
  cout << "	How are you? I am fine. I miss you.\n";
  string friend_name;
- cout << "Tell me your another one of your friends' name:\n";
+ cout << "Tell me another one of your friends' name:\n";
  cin >> friend_name;
  cout << "Have you seen " + friend_name + " lately?\n";
  char friend_sex = 0;

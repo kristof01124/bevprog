@@ -36,10 +36,10 @@ private:
 int main() {
 	value mini, maxi, szum;
 	bool first = true;
-	double num;
-	std::string unit;
 	vector<value> values;
 	while (cin>>num>>unit) {
+		double num;
+		std::string unit;
 		value temp;
 		if (!temp.set(num,unit)) {
 			std::cout<<"Wrong unit type!"<<std::endl;
