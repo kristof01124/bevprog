@@ -74,7 +74,7 @@ try {
 	{
 		cout<<14<<endl;
 		vector<char> v(5); 
-		for (int i=0; i<=v.size(); ++i) ;
+		for (int i=0; i<v.size(); ++i) ;
 			cout << " Success!\n ";
 	}
 	{
@@ -106,7 +106,7 @@ try {
 	{
 		cout<<19<<endl;
 		vector<int> v(5); 
-		for (int i=0; i<=v.size(); ++i) ; 
+		for (int i=0; i<v.size(); ++i) ; 
 			cout << " Success!\n " ;
 	}
 	{
