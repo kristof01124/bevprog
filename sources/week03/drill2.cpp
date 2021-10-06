@@ -36,9 +36,9 @@ private:
 int main() {
 	value mini, maxi, szum;
 	bool first = true;
+	vector<value> values;
 	double num;
 	std::string unit;
-	vector<value> values;
 	while (cin>>num>>unit) {
 		value temp;
 		if (!temp.set(num,unit)) {
