@@ -270,7 +270,7 @@ void Calculator::breakDown(const std::string& s)
 					currentType = Number;
 			}
 		}
-		else if (el == ' ') {
+		else if (el == ' ' || el == ',') {
 			if (currentWord.size() > 0) {
 				m_elements.push_back(element(currentType, currentWord));
 				currentWord.clear();
