@@ -1,9 +1,0 @@
-﻿  Calculator.cpp
-C:\Users\krist\OneDrive - Debreceni Egyetem\Programozás\c++\Calculator\Calculator\Calculator.cpp(395,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-  main.cpp
-  Generating code
-  0 of 577 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Finished generating code
-  Calculator.vcxproj -> C:\Users\krist\OneDrive - Debreceni Egyetem\Programozás\c++\Calculator\Calculator\x64\Release\Calculator.exe
