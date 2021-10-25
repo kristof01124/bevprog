@@ -1,0 +1,12 @@
+﻿E:\Microsoft visual studio\IDE\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: The intermediate directory (x64\Release\) contains files shared from another project (Calculator-DESKTOP-K3IBMOA.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+  Calculator.cpp
+C:\Users\krist\OneDrive - Debreceni Egyetem\Programozás\c++\Calculator\Calculator\Calculator.cpp(403,22): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  exception.cpp
+  Functions.cpp
+  Operations.cpp
+  main.cpp
+  Generating code
+  Previous IPDB was built with incompatible compiler, fall back to full compilation.
+  All 582 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Calculator.vcxproj -> C:\Users\krist\OneDrive - Debreceni Egyetem\Programozás\c++\Calculator\Calculator\x64\Release\Calculator.exe
