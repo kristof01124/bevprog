@@ -2,7 +2,7 @@
 #include <string>
 #include <iostream>
 #include <vector>
-#include "..\Header_files\exception.h"
+#include "exception.h"
 
 enum Type {Number, Function, Expression, Operator, Variable, None};
 
