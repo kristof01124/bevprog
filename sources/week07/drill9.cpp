@@ -59,6 +59,7 @@ static int monthDays[12];
 
  void add_month(int n) {
    m+=n;
+   y+= m/12;
    m%=12;
    if (m==0)
     m=12;
