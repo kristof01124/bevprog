@@ -11,7 +11,7 @@ private:
  int d;
 
 //helper functions
-public:
+private:
    static int leap_year(int a){
    if (a%400 == 0 || (a%100!=0 && a%4==0))
     return 1;
@@ -22,20 +22,21 @@ public:
  static int days_of_month(int y,int m){
    if (m!=2)
     return monthDays[m-1];
-    return monthDays[m-1]+leap_year(y);
+
+  return monthDays[m-1]+leap_year(y);
   }
 
 
 //actual functions
 public:
-  static int monthDays[12];
+static int monthDays[12];
  Date(int a, int b, int c) {
    //checks the month
    if (b<1 || b>12)
-   simple_error("Bad date!");
+    simple_error("Bad date!");
    //checks the day
    if (c<0 || (c>days_of_month(a,b)))
-   simple_error("Bad date!");
+    simple_error("Bad date!");
    y = a;
    m = b;
    d = c;
@@ -88,6 +89,8 @@ ostream& operator<<(ostream& os, const Date& d)
 }
 
 int main() {
-  Date today(2020, 11, 20);
-  today.add_days(30);
+  Date today(2023,9,21);
+  Date tommorow = today;
+  tommorow.add_days(1);
+  std::cout<<today<<std::endl<<tommorow;
 }
