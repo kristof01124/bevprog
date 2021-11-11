@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <vector>
 
-#define N 1
+#define N 7
 
 struct point  {
   int m_x,m_y;
@@ -26,6 +26,7 @@ public:
 
 int main() {
   std::vector<point> original_points;
+  std::cout<<"Gimme "<<N<<" points!"<<std::endl;
   for (int i = 0; i<N;++i) {
     int a,b;
     std::cin>>a>>b;
