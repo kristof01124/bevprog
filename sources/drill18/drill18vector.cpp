@@ -13,6 +13,7 @@ void print_vector(std::ostream& os, std::vector<int> v) {
 void f(std::vector<int> gv) {
   std::vector<int> lv;
   lv = gv;
+  print_vector(std::cout,lv);
   std::vector<int> lv2(gv);
   print_vector(std::cout,lv2);
 }

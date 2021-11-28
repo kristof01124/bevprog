@@ -4,8 +4,7 @@
 using namespace std;
 
 template<typename T>
-struct S {
-private:
+class S {
    T val;
    void set(const T& v) {
      val = v;
@@ -15,8 +14,7 @@ private:
    T get() const;
    void print() {std::cout<<val<<std::endl;}
    S(T v)
-   :val(v)
-   {};
+   :val(v) {};
    void operator = (const T& other) {
      set(other);
    }
@@ -33,7 +31,7 @@ T& S<T>::get() {
 }
 
 template<typename T>
-T S<T>::get()const {
+T S<T>::get() const {
   return val;
 }
 
@@ -55,7 +53,9 @@ std::ostream& operator << (std::ostream& out,S<T>& other) {
     return out<<other.get();
 }
 
+
 int main() {
+  std::vector<int> a;
   S<int> s_int(2);
   s_int.print();
   S<char> s_char('2');
@@ -66,10 +66,14 @@ int main() {
   s_str.print();
   S<std::vector<int>> s_vec({2});
   print_vector(std::cout,s_vec.get());
+  std::cout<<"int:"<<std::endl;
   std::cin>>s_int;
   std::cout<<s_int<<std::endl;
+  std::cout<<"double:"<<std::endl;
   std::cin>>s_dub;
   std::cout<<s_dub<<std::endl;
+  std::cout<<"string:"<<std::endl;
   std::cin>>s_str;
   std::cout<<s_str<<std::endl;
+  std::cout<<"int:"<<std::endl;
 }
