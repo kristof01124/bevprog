@@ -21,7 +21,7 @@ class S {
  };
 
 template<typename T>
-read_val(T& v) {
+void read_val(T& v) {
   std::cin>>v;
 }
 
@@ -75,5 +75,4 @@ int main() {
   std::cout<<"string:"<<std::endl;
   std::cin>>s_str;
   std::cout<<s_str<<std::endl;
-  std::cout<<"int:"<<std::endl;
 }
